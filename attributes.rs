@@ -10,7 +10,6 @@
 // #![crate_type = "lib"] - crate as library (instead `--crate-type` compile param)
 // #![crate_name = "something"] - library is named "something"
 //
-
 #[cfg(target_os = "linux")]
 fn are_you_on_linux() {
     println!("you are running linux!")
@@ -38,11 +37,11 @@ fn conditional_function() {
 #[allow(non_camel_case_types)]
 
 // add default Show trait implementation to struct
-#[deriving(Show)]
+#[derive(Show)]
 struct SomeStructure (int, int);
 
 fn main() {
     are_you_on_linux();
     conditional_function();
-    println!("test deriving Show - {}", SomeStructure(1,2));
+    println!("test derive Show - {:?}", SomeStructure(1,2));
 }
