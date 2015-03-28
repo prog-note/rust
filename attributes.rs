@@ -13,22 +13,22 @@
 
 #[cfg(target_os = "linux")]
 fn are_you_on_linux() {
-  println!("you are running linux!")
+    println!("you are running linux!")
 }
 
 #[cfg(not(target_os = "linux"))]
 fn are_you_on_linux() {
-  println!("you are *not* running linux!")
+    println!("you are *not* running linux!")
 }
 
 #[cfg(not(some_key))]
 fn conditional_function() {
-  println!("you don't pass `--cfg some_key`!")
+    println!("you don't pass `--cfg some_key`!")
 }
 
 #[cfg(some_key)]
 fn conditional_function() {
-  println!("you just pass `--cfg some_key`!")
+    println!("you just pass `--cfg some_key`!")
 }
 
 // allow unused code
@@ -42,7 +42,7 @@ fn conditional_function() {
 struct SomeStructure (int, int);
 
 fn main() {
-  are_you_on_linux();
-  conditional_function();
-  println!("test deriving Show - {}", SomeStructure(1,2));
+    are_you_on_linux();
+    conditional_function();
+    println!("test deriving Show - {}", SomeStructure(1,2));
 }
