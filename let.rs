@@ -1,26 +1,17 @@
-use std::mem;
-
 fn main() {
     let first = 1;
-    println!("immutable:  {}", first as int);
+    println!("immutable variable:  {}", first);
 
-    let second = 2i;
-    println!("immutable with type inference: {}", second);
-
-    let big_int = 1i64;
-    println!("size of `big_int` in bytes: {}", std::mem::size_of_val(&big_int));
-    println!("size of `big_int` in bites: {}", std::mem::size_of_val(&big_int)*8);
-
-    let third: int = 4;
-    println!("immutable with defined type: {}", third);
-
-    let mut four: int = 2;
-    println!("mutable with defined type: {}", four);
-
+    let mut second = 2;
+    println!("mutable variable: {}", second);
 
     let (x, y, z) = (1, 2, 3);
-    println!("parallel assign - x: {}, y: {}, z: {}", x, y, z);
-
     let (x, y, z) = (z, y, x);
-    println!("parallel reassign - x: {}, y: {}, z: {}", x, y, z);
+    println!("parallel assigning - x: {}, y: {}, z: {}", x, y, z);
+
+    // `let` iside `if` for destruction object
+    let number = Some(7);
+    if let Some(i) = number {
+        println!("Some - {}", i);
+    }
 }
