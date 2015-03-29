@@ -1,7 +1,7 @@
 fn main() {
-    let first = 1i;
+    let first = 1isize;
 
-    let closure = |arg: int| -> int {
+    let closure = |arg: isize| -> isize {
         println!("argument {}", arg);
         println!("out varibale {}", first);
         arg + first

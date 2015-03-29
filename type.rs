@@ -1,9 +1,9 @@
-// i8, i16, i32, i64, isize (pointer size)
-// u8, u16, u32, u64, usize (pointer size)
+// i8, i16, i32, i64, isize (instead `int` *deprecated)
+// u8, u16, u32, u64, usize (instead `uint` *deprecated)
 // f32, f64
 
-type Integer64 = i64;
-type UInteger64 = u64;
+type Integer = isize;
+type UInteger = usize;
 
 fn main() {
     let default_int = 1;
@@ -15,9 +15,9 @@ fn main() {
     let float_32: f32 = 2.0;
     println!("Explicit - i64: {}, f32: {}", int_64, float_32);
 
-    let integer: Integer64 = 1;
-    let uinteger: UInteger64 = 2;
-    println!("Alias - Integer64: {}, UInteger64: {}", integer, uinteger);
+    let integer: Integer = 1;
+    let uinteger: UInteger = 2;
+    println!("Alias - Integer: {}, UInteger: {}", integer, uinteger);
 
     let postfix_i64 = 1i64;
     let postfix_f64 = 2f64;

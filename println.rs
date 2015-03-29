@@ -2,7 +2,7 @@ use std::fmt;
 
 // add default Debug trait implementation to structure
 #[derive(Debug)]
-struct SomeStructure (int, int);
+struct SomeStructure (isize, isize);
 
 // implement Display for structure
 impl fmt::Display for SomeStructure {

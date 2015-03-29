@@ -1,6 +1,6 @@
 fn main() {
 
-    fn _if(x: int) -> int {
+    fn _if(x: isize) -> isize {
         if x < 0 { -1 }
         else if x > 0 { 1 }
         else { 0 }
@@ -9,7 +9,7 @@ fn main() {
 
 
     //-----------------------------------------------------------------
-    fn _match_int(x: int) -> &'static str {
+    fn _match_int(x: isize) -> &'static str {
         match x {
             0     => "zero",
             1 | 2 => "one or two",
@@ -22,7 +22,7 @@ fn main() {
 
     //-----------------------------------------------------------------
     enum Options {
-        AsInt(int),
+        AsInt(isize),
         Nothing
     }
     fn _match_enum(x: Options) -> String {
@@ -37,8 +37,8 @@ fn main() {
 
     //-----------------------------------------------------------------
     struct Point {
-        x: int,
-        y: int
+        x: isize,
+        y: isize
     }
     fn _match_struct(x: Point) -> String {
         match x {

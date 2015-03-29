@@ -38,7 +38,7 @@ fn conditional_function() {
 
 // add default Debug trait implementation to struct
 #[derive(Debug)]
-struct SomeStructure (int, int);
+struct SomeStructure (isize, isize);
 
 fn main() {
     are_you_on_linux();
