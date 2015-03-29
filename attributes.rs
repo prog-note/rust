@@ -36,12 +36,12 @@ fn conditional_function() {
 // allow camel case type names
 #[allow(non_camel_case_types)]
 
-// add default Show trait implementation to struct
-#[derive(Show)]
+// add default Debug trait implementation to struct
+#[derive(Debug)]
 struct SomeStructure (int, int);
 
 fn main() {
     are_you_on_linux();
     conditional_function();
-    println!("test derive Show - {:?}", SomeStructure(1,2));
+    println!("test Debug - {:?}", SomeStructure(1,2));
 }
