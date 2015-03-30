@@ -21,6 +21,17 @@ fn main() {
 
 
     //-----------------------------------------------------------------
+    fn _match_tuple(tuple: (i32, i32))  {
+        match tuple {
+            (0, y) => println!("first should be 0, second: {:?}", y),
+            (x, 0) => println!("second should be 0, first: {:?}", x),
+            _      => println!("doesn't matter"),
+        }
+    }
+    _match_tuple((0,1));
+
+
+    //-----------------------------------------------------------------
     enum Options {
         AsInt(isize),
         Nothing
