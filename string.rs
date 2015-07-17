@@ -1,5 +1,5 @@
 fn main() {
-    // &str (string slice) cant be muttable
+    // &str (string slice) can't be muttable
     let as_slice = "world";
     let as_slice2: &str = "world";
 
@@ -9,12 +9,10 @@ fn main() {
 
     // String back to &str is not chip
     let back_to_slice = &as_string2;
-    let back_to_slice2 = as_string2.as_slice();
-
 
     println!("String + &str = {}", as_string + as_slice);
-    println!("&str - {}", as_slice2);
     println!("String - {}", as_string2);
+    println!("&str - {}", as_slice2);
     println!("&str - {}", back_to_slice);
 
 

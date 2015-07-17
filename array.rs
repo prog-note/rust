@@ -2,7 +2,7 @@ fn main() {
     let array = [1,2,3];
     println!("simple array: {:?}", array);
 
-    let slice_array: &[i32] = array.as_slice();
+    let slice_array: &[i32] = &array;
     println!("slice array first val: {}", slice_array[0]);
 
     let direct_slice_array = &[1,2,3];
